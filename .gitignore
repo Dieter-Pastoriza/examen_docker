@@ -1,11 +1,34 @@
-<<<<<<< HEAD
-__pycache_/
-*.pyc
-=======
-# Ignorar los archivos __pycache__
+# Archivos de caché de Python
 __pycache__/
-
-# Ignorar los archivos .pyc y .pyo
 *.pyc
 *.pyo
->>>>>>> 105c09b3b9723b3fe8a9d90139551e6a07a1cdd2
+
+# Archivos de caché y compilación de Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+
+# Archivos de configuración de Django
+*.env
+*.ini
+
+# Directorios de virtualenv (si los usas)
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de PyCharm, Visual Studio Code y otros IDEs
+.vscode/
+.idea/
+
+# Archivos de prueba de Django
+*.sqlite3
+db.sqlite3
+
+# Archivos generados durante la construcción de contenedores Docker
+docker-compose.override.yml
