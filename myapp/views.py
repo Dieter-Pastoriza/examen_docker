@@ -1,9 +1,10 @@
+
 from django.http import HttpResponse
-from .models import Project, Task
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST   
+from .models import Project, Task
 from .forms import CreateNewTask, CreateNewProject
 
-# Create your views here.
 
 
 def index(request):
@@ -67,3 +68,17 @@ def project_detail(request, id):
         'project': project,
         'tasks': tasks
     })
+@require_POST
+def task_delete(request, id):
+
+    task = get_object_or_404(Task, id=id)
+    task.delete()
+    return redirect('tasks')
+
+@require_POST
+def task_done(request, id):
+
+    task = get_object_or_404(Task, id=id)
+    task.done = True         
+    task.save()
+    return redirect('tasks')
