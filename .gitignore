@@ -1,11 +1,2 @@
-<<<<<<< HEAD
-__pycache_/
-*.pyc
-=======
-# Ignorar los archivos __pycache__
 __pycache__/
-
-# Ignorar los archivos .pyc y .pyo
 *.pyc
-*.pyo
->>>>>>> 105c09b3b9723b3fe8a9d90139551e6a07a1cdd2
