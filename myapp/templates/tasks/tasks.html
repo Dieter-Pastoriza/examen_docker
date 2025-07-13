@@ -1,28 +1,20 @@
 {% extends 'layouts/base.html' %}
-{% block content %}
+{%block content%}
+<h1>Tasks</h1>
+
 {% for task in tasks %}
+
 <div>
-    <h1>{% if not task.done %}⌛{% else %}✅{% endif %} {{ task.title }} </h1>
-    {% if not task.done %}
-        <p>Tarea pendiente</p>
-    {% else %}
-        <p>Tarea Realizada</p>
-    {% endif %}
-    <p>{{ task.description }}</p>
-    <p>Project: {{ task.project }}</p>
-
-   <form action="{% url 'task_delete' task.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit">🗑 Delete</button>
-    </form>
-
-    {% if not task.done %}
-   <form action="{% url 'task_done' task.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit">✅ Done</button>
-    </form>
-    {% endif %}
+    <h1>{% if task.done == False %}⌛{% else %}✅{% endif %} {{task.title}} </h1>
+    {% if task.done == False %}
+    <p>Tarea pendiente</p>
+    {%else%}
+    <p>Tarea Realizada</p>
+    {%endif%}
+    <p>{{task.description}}</p>
+    <p>Project: {{task.project}}</p>
 </div>
-<hr>
+<button>Delete</button>
+<button>✅ Done</button>
 {% endfor %}
-{% endblock %}
+{%endblock%}
