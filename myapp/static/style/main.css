@@ -45,3 +45,109 @@ body {
     text-align: center;
     display: block;
 }
+/* === General === */
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Header === */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #5be0b3;
+}
+
+/* === Container === */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* === Task Card === */
+.task-card {
+    background-color: #1e1e2f;
+    border: 1px solid #2e2e40;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+}
+
+/* === Title === */
+.task-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* === Description & Project === */
+.task-card p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* === Status === */
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.status.done {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.status.pending {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* === Button Group === */
+.button-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* === Buttons === */
+button {
+    background-color: #5be0b3;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #0c0c0c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3acfa2;
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #c0392b;
+}
