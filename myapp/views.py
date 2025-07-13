@@ -1,8 +1,6 @@
-
 from django.http import HttpResponse
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.decorators.http import require_POST   
 from .models import Project, Task
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateNewTask, CreateNewProject
 from django.db.models import Count  # para contar tareas
 from django.views.decorators.http import require_http_methods
